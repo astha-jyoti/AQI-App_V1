@@ -162,9 +162,6 @@ function App() {
         )
         y+=1;
         if(y%2!=0){
-        
-          document.getElementById("places").style.backgroundColor="#108898";
-          document.getElementById("text1_places").style.color="#FFFFFF";
           
       for (let j in rows){
            idwMarkers[j]= L.idwMarker([parseFloat(rows[j][0]),parseFloat(rows[j][1])],{
@@ -180,9 +177,6 @@ function App() {
         
         else
         {
-          
-          document.getElementById("places").style.backgroundColor="#FFFFFF";
-          document.getElementById("text1_places").style.color="#108898";
           
           y=0;
 
