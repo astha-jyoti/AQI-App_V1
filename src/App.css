@@ -137,9 +137,10 @@ bottom: 20%;
 
 #text1 {
   position: absolute;
-left: 48px;
+left: 40px;
 top: 13px;
-  font-family: Roboto;
+  font-family: Montserrat;
+  font-weight: 400;
 font-size: 14px;
 font-style: normal;
 font-weight: 500;
@@ -156,7 +157,8 @@ width: 64px;
 height: 16px;
 left: 48px;
 top: 14px;
-  font-family: Roboto;
+  font-family: Montserrat;
+  font-weight: 400;
 font-size: 14px;
 font-style: normal;
 font-weight: 500;

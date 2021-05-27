@@ -23,7 +23,7 @@ const Search = (props) => {
       //marker: L.circleMarker({radius: 5,}),
         showPopup: true,
 
-       autoClose: true,
+       
         retainZoomLevel: false,
         animateZoom: true,
         //keepResult: true,

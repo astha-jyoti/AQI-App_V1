@@ -81,7 +81,7 @@ L.Control.DisplayIDW = L.Control.extend({
       `<div class="leaflet-control-layers-base1">
       <div class="property-card">
       <div id="aqi">${this.values[1]}<a> AQI</a></div>
-            <div id="gps"><p>Latitude: ${Math.round(this.values[0][0] * 1000.0) / 1000.0}</p>
+            <div id="gps"><br><p>Latitude: ${Math.round(this.values[0][0] * 1000.0) / 1000.0}</p>
             <p>Longitude: ${Math.round(this.values[0][1] * 1000.0) / 1000.0}</p></div>
       </div>
       
