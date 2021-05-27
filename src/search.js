@@ -3,7 +3,7 @@ import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import { useEffect } from 'react';
 import "leaflet-geosearch/dist/geosearch.css"
 import "leaflet-geosearch/assets/css/leaflet.css"
-//import L from './js/leaflet-custom';
+//import L from './Helpers/leaflet-custom';
 
 
 const Search = (props) => {
@@ -11,7 +11,11 @@ const Search = (props) => {
     
     useEffect(() => {
       const searchControl = new GeoSearchControl({
-        provider: new OpenStreetMapProvider(),
+        provider: new OpenStreetMapProvider({
+          params: {
+            countrycodes: "in",
+          }
+        }),
         style: 'bar',
         autoComplete: true,
        // popupFormat: ({result}) => `${result.x}`,
@@ -19,8 +23,8 @@ const Search = (props) => {
       //marker: L.circleMarker({radius: 5,}),
         showPopup: true,
 
-       // autoClose: true,
-        retainZoomLevel: true,
+       autoClose: true,
+        retainZoomLevel: false,
         animateZoom: true,
         //keepResult: true,
         searchLabel: 'Search places',
