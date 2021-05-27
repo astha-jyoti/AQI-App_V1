@@ -97,6 +97,7 @@
   top: 25%;
 bottom: 20%;
 
+
 }
 #icon_places {
   height: 19.9950008392334px;
@@ -106,6 +107,19 @@ bottom: 20%;
   left: 10%;
   top: 25%;
 bottom: 20%;
+
+
+}
+
+#icon2 {
+
+  border-radius: 0px;
+  position: absolute;
+  left: 20%;
+  top: 25%;
+bottom: 20%;
+z-index: 400;
+
 
 }
 #icon_heatmap {
@@ -124,7 +138,7 @@ bottom: 20%;
 #text1 {
   position: absolute;
 left: 48px;
-top: 12px;
+top: 13px;
   font-family: Roboto;
 font-size: 14px;
 font-style: normal;
@@ -141,7 +155,7 @@ color: #108898;
 width: 64px;
 height: 16px;
 left: 48px;
-top: 12px;
+top: 14px;
   font-family: Roboto;
 font-size: 14px;
 font-style: normal;

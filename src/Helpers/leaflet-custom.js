@@ -3,6 +3,7 @@ import { map } from 'leaflet';
 import '../App.css';
 
 
+
 L.IdwMarker = L.CircleMarker.extend({
   options: {
     range: 1000,
@@ -102,7 +103,7 @@ L.Control.Displaymap = L.Control.extend({
   onAdd: function() {
     let container = L.DomUtil.create('button', 'places_markers');
     container.innerHTML = 
-      ` <a id=map1><button id="places"><div id="icon_places"><img src="./images/places.png">
+      ` <a id=map1><button id="places"><div id="icon_places"><img id="icon2" src=${require("../images/places.png")}>
       </div>
         <div><p id="text1_places">Places</p></div>
       </button></a>`;

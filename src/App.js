@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef} from 'react';
 import L from './Helpers/leaflet-custom';
 import { Map, TileLayer } from 'react-leaflet';
 import './App.css';
@@ -121,9 +121,7 @@ function App() {
     }
     
 };
-//let clickss;
-const [clickss, setclicks] = useState({});
-const [isclicks, issetclick] = useState(false);
+
 
   useEffect(() => {
     const { current = {} } = mapRef;
@@ -137,7 +135,7 @@ const [isclicks, issetclick] = useState(false);
       }
 
       if (!map) return;
-      let idwlayer=L.idwLayer(rows, {
+      L.idwLayer(rows, {
         opacity: 0.4,
         // maxZoom: 18,
         cellSize: 12,
@@ -149,8 +147,7 @@ const [isclicks, issetclick] = useState(false);
         gradient: aqiGradient,
       }).addTo(map);
 
-      let mapdisplay=undefined;
-      mapdisplay=L.control.displaymap({
+      L.control.displaymap({
         position: "topright",
       }).addTo(map);
 
@@ -165,8 +162,10 @@ const [isclicks, issetclick] = useState(false);
         )
         y+=1;
         if(y%2!=0){
+        
           document.getElementById("places").style.backgroundColor="#108898";
           document.getElementById("text1_places").style.color="#FFFFFF";
+          
       for (let j in rows){
            idwMarkers[j]= L.idwMarker([parseFloat(rows[j][0]),parseFloat(rows[j][1])],{
               fillColor: getColor(parseFloat(rows[j][2])),
@@ -181,8 +180,11 @@ const [isclicks, issetclick] = useState(false);
         
         else
         {
+          
           document.getElementById("places").style.backgroundColor="#FFFFFF";
           document.getElementById("text1_places").style.color="#108898";
+          
+          y=0;
 
           for (let j in rows) {
          idwMarkers[j].remove(); 
@@ -250,7 +252,7 @@ const [isclicks, issetclick] = useState(false);
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="&copy; <a href=&quot;https://www.openstreetmap.org/copyright&quot;>OpenStreetMap</a> contributors" />
         <Search/>
       </Map>
-      <div id="navigation"><div id="icon1"><img src={"/Vector.png"}></img>
+      <div id="navigation"><div id="icon1"><img src={"/Vector.png"} alt={"none"}></img>
       </div>
         <div><p id="text1">Directions</p></div>
       </div>
